@@ -1,0 +1,1 @@
+This bug occurs when using the Expo `Linking` API to handle deep links.  If the app is launched from a deep link, the `getInitialURL` method may sometimes return `null`, even though the intent clearly contains a URL. This is particularly noticeable when the app is cold-started.  The inconsistency can lead to features relying on deep links to fail silently.
